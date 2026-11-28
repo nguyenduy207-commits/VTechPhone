@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-11-24T16:21:20 ICT" name="Default suite" finished-at="2026-11-24T16:21:21 ICT" duration-ms="1639">
+    <groups>
+    </groups>
+    <test started-at="2026-11-24T16:21:20 ICT" name="Default test" finished-at="2026-11-24T16:21:21 ICT" duration-ms="1639">
+      <class name="vtechphone.service.ProductServiceTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:20 ICT" name="setUp" finished-at="2026-11-24T16:21:21 ICT" duration-ms="1439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="countAllShouldReturnDaoCount()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="countAllShouldReturnDaoCount" finished-at="2026-11-24T16:21:21 ICT" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- countAllShouldReturnDaoCount -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="setUp" finished-at="2026-11-24T16:21:21 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createShouldKeepExistingStock()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="createShouldKeepExistingStock" finished-at="2026-11-24T16:21:21 ICT" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createShouldKeepExistingStock -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="setUp" finished-at="2026-11-24T16:21:21 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createShouldSetNullStockToZero()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="createShouldSetNullStockToZero" finished-at="2026-11-24T16:21:21 ICT" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createShouldSetNullStockToZero -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="setUp" finished-at="2026-11-24T16:21:21 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="deleteShouldDeleteOnlyWhenProductExists()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="deleteShouldDeleteOnlyWhenProductExists" finished-at="2026-11-24T16:21:21 ICT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteShouldDeleteOnlyWhenProductExists -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="setUp" finished-at="2026-11-24T16:21:21 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="deleteShouldNotCallDaoDeleteWhenMissing()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="deleteShouldNotCallDaoDeleteWhenMissing" finished-at="2026-11-24T16:21:21 ICT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteShouldNotCallDaoDeleteWhenMissing -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="setUp" finished-at="2026-11-24T16:21:21 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getAllProductsShouldUseRequestedPageAndSize()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="getAllProductsShouldUseRequestedPageAndSize" finished-at="2026-11-24T16:21:21 ICT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllProductsShouldUseRequestedPageAndSize -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="setUp" finished-at="2026-11-24T16:21:21 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getProductByIdShouldReturnProduct()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="getProductByIdShouldReturnProduct" finished-at="2026-11-24T16:21:21 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProductByIdShouldReturnProduct -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="setUp" finished-at="2026-11-24T16:21:21 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchShouldPassFiltersToDao()[pri:0, instance:vtechphone.service.ProductServiceTest@1c1bbc4e]" started-at="2026-11-24T16:21:21 ICT" name="searchShouldPassFiltersToDao" finished-at="2026-11-24T16:21:21 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchShouldPassFiltersToDao -->
+      </class> <!-- vtechphone.service.ProductServiceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
