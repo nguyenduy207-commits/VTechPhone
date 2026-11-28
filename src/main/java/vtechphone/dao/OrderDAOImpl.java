@@ -18,11 +18,9 @@ public class OrderDAOImpl implements OrderDAO {
 			em.getTransaction().begin();
 
 			// Tính tổng tiền từ items và cập nhật stock
-			BigDecimal total = BigDecimal.ZERO;
+			BigDecimal goodsTotal = BigDecimal.ZERO;
 			for (OrderItem item : order.getItems()) {
-				// Lấy Product từ EntityManager hiện tại (Managed Entity)
 				Product managedProduct = em.find(Product.class, item.getProduct().getProductId());
-
 				if (managedProduct == null) {
 					throw new IllegalStateException(
 							"Sản phẩm ID " + item.getProduct().getProductId() + " không tồn tại!");
@@ -30,23 +28,16 @@ public class OrderDAOImpl implements OrderDAO {
 				if (managedProduct.getStock() < item.getQuantity()) {
 					throw new IllegalStateException("Sản phẩm " + managedProduct.getName() + " không đủ hàng!");
 				}
-
-				// Cập nhật số lượng tồn kho
 				managedProduct.setStock(managedProduct.getStock() - item.getQuantity());
-
-				// Gán lại Product vừa tìm được vào OrderItem để Hibernate nhận biết
 				item.setProduct(managedProduct);
 				item.setUnitPrice(managedProduct.getPrice());
-
-				total = total.add(managedProduct.getPrice().multiply(BigDecimal.valueOf(item.getQuantity())));
+				goodsTotal = goodsTotal.add(managedProduct.getPrice().multiply(BigDecimal.valueOf(item.getQuantity())));
 			}
-
-			order.setTotalAmount(total);
-
-			// Lưu Order. Cascade ALL sẽ tự động lưu OrderItems bên trong.
+			BigDecimal shippingFee = goodsTotal.multiply(new BigDecimal("0.01")).setScale(0,
+					java.math.RoundingMode.HALF_UP);
+			order.setTotalAmount(goodsTotal.add(shippingFee));
 			em.persist(order);
 			em.getTransaction().commit();
-
 		} catch (RuntimeException ex) {
 			if (em.getTransaction().isActive())
 				em.getTransaction().rollback();
@@ -87,7 +78,7 @@ public class OrderDAOImpl implements OrderDAO {
 		EntityManager em = VTechPhonePU.getEntityManager();
 		try {
 			return em.createQuery(
-					"SELECT o FROM Order o JOIN FETCH o.items WHERE o.customer.userId = :uid ORDER BY o.orderDate DESC",
+					"SELECT DISTINCT o FROM Order o LEFT JOIN FETCH o.items i LEFT JOIN FETCH i.product WHERE o.customer.userId = :uid ORDER BY o.orderDate DESC",
 					Order.class).setParameter("uid", userId).getResultList();
 		} finally {
 			em.close();

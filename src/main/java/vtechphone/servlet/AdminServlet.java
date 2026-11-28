@@ -62,6 +62,24 @@ public class AdminServlet extends HttpServlet {
 				req.getRequestDispatcher("/WEB-INF/admin/dashboard.jsp").forward(req, resp);
 				return;
 			}
+//			if (action == null || action.equals("/") || action.equals("/dashboard")) {
+//			    req.setAttribute("totalProducts", productService.countAllProducts());
+//			    req.setAttribute("totalOrders", orderService.getAllOrders().size());
+//			    if (isAdmin(currentUser)) {
+//			        req.setAttribute("totalUsers", userService.findAllUsers().size());
+//			        String currentMonth = java.time.YearMonth.now().toString();
+//			        BigDecimal monthlyRevenue = BigDecimal.ZERO;
+//			        for (Object[] row : orderService.getMonthlyRevenue()) {
+//			            if (row != null && row.length >= 2 && currentMonth.equals(String.valueOf(row[0])) && row[1] != null) {
+//			                monthlyRevenue = new BigDecimal(row[1].toString());
+//			                break;
+//			            }
+//			        }
+//			        req.setAttribute("monthlyRevenue", monthlyRevenue);
+//			    }
+//			    req.getRequestDispatcher("/WEB-INF/admin/dashboard.jsp").forward(req, resp);
+//			    return;
+//			}
 
 			// ===== CATEGORIES (Chỉ Admin) =====
 			if (action.equals("/categories")) {

@@ -211,21 +211,15 @@
     }
 
     function validateStatus() {
-        const select = document.getElementById('newStatus');
+    	const select = document.getElementById('newStatus');
         const value = select.value;
         if (!value) {
             select.classList.add('is-invalid');
             alert('Vui lòng chọn trạng thái mới trước khi cập nhật.');
             return false;
         }
-        return confirm(document.getElementById('confirmText').textContent + ' Bạn có chắc chắn?');
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const select = document.getElementById('newStatus');
-        if (select) {
-            select.addEventListener('change', updateConfirmMessage);
-        }
+        const selectedLabel = select.options[select.selectedIndex].text.trim();
+        return confirm('Bạn có chắc chắn muốn cập nhật trạng thái đơn hàng thành "' + selectedLabel + '"?');
     });
 </script>
 
